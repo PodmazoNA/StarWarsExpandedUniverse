@@ -575,7 +575,7 @@ footer {
 }
 
 .horizontal-scroll{
-    width: 55vh;
+    width: auto;
     height: 94vw;
     position: absolute;
     direction: rtl;
