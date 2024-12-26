@@ -588,8 +588,8 @@ footer {
 .horizontal-scroll > div{
     width: 5vh;
     height: auto;
-    margin-top: -13vh;
-    margin-bottom: -13vh;
+    margin-top: -13vw;
+    margin-bottom: -13vw;
     margin-right: -1vh;
     transform: rotate(90deg) translateX(40vh);
     transform-origin: right top;
