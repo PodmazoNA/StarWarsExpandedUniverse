@@ -586,11 +586,11 @@ footer {
 }
 
 .horizontal-scroll > div{
-    width: auto;
-    height: 25vh;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-    margin-right: 5vw;
+    width: 5vh;
+    height: auto;
+    margin-top: -13vh;
+    margin-bottom: -13vh;
+    margin-right: -1vh;
     transform: rotate(90deg) translateX(40vh);
     transform-origin: right top;
     button{
@@ -599,8 +599,8 @@ footer {
 }
 
 .horizontal-scroll > div:hover{
-    width: auto;
-    height: 25vh;
+    width: 25vh;
+    height: auto;
     transform: rotate(90deg) translateX(40vh) translateY(0);
     transform-origin: right top;
 }
@@ -617,7 +617,6 @@ footer {
 .gallery-item {
     min-width: 150px; /* Минимальная ширина колонки */
     max-width: 250px;
-    height: 2500hv;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -631,8 +630,8 @@ footer {
 }
 
 .gallery-item img {
-    width: auto;
-    height: 2500vh;
+    width: 100%;
+    height: auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     object-fit: cover;
@@ -655,7 +654,6 @@ footer {
     color: white;
     text-align: center;
 }
-
 .gallery-item-overlay {
     position: absolute;
     top: 0;
