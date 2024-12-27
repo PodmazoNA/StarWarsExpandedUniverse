@@ -141,27 +141,27 @@
         <strong>Введите капчу:</strong>
         <span id="captcha" style="background-image: url(images/captch.png); background-color: transparent; border: none; background-size: cover;"></span>
         <input type="text" id="captchaInput" />
-        <button class="lngbtn" onclick="validateCaptcha()">Проверить капчу</button>
+        <button class="lngbtn" id="capbtn" onclick="validateCaptcha()">Проверить капчу</button>
             </div>
             <div>
         <strong>Введите сумму чисел:</strong>
         <span id="numbers"></span>
         <input type="text" id="userSum" />
         <input type="hidden" id="correctSum" />
-        <button class="lngbtn" onclick="validateNumbersCaptcha()">Проверить сумму</button>
+        <button class="lngbtn" id="sumbtn" onclick="validateNumbersCaptcha()">Проверить сумму</button>
             </div>
             <div>
         <button id="submitBtn" disabled onclick="this.parentNode.parentNode.parentNode.remove(); return false;">X</button>
             </div>
     </div>
     </div>
-    <h2 id="cont">Мы всегда рады новым идеям. Пожалуйста, не забудьте указать имя, чтобы мы знали, кому сказать спасибо.</h2>
+    <h2 id="cont" style="font-size: 200%;">Мы всегда рады новым идеям. Пожалуйста, не забудьте указать имя, чтобы мы знали, кому сказать спасибо.</h2>
     <div id="cont">
-    <h3>Имя</h3>
-    <input type="text" id="ignore">
-    <h3>Предложение</h3>
-    <textarea type="text" id="textInput"></textarea>
-    <br><button class="lngbtn" id="addButton">отправить</button></br>
+        <h3 style="font-size: 150%;">Имя</h3>
+        <input type="text" id="ignore">
+        <h3 style="font-size: 150%;">Предложение</h3>
+        <textarea type="text" id="textInput"></textarea>
+        <br><button class="lngbtn" id="addButton">отправить</button></br>
     </div>
 
     <script>
@@ -183,6 +183,18 @@
                 input.value = ""; // Очистить поле ввода
             } else {
                 alert("Пожалуйста, введите текст.");
+            }
+        });
+    </script>
+
+    <script>
+        let originalHeight = window.innerHeight;
+        window.addEventListener('resize', () => {
+            if (window.innerHeight < originalHeight){
+                document.getElementsByClassName('lngbtn').style.display = `none`;
+            }
+            else{
+                document.getElementsByClassName('lngbtn').style.display = `block`;
             }
         });
     </script>
